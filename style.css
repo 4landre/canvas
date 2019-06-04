@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+canvas {
+    display: block;
+}
+
+button {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+#canvas {
+    background: rgb(221, 221, 221);
+}
