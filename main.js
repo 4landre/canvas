@@ -1,12 +1,14 @@
 var canvas = document.getElementById('canvas');//获取canvas
-//设置canvas全屏
-setwindowsize()
+setwindowsize() //设置canvas全屏
+
 window.onresize = function () {
     setwindowsize()
 }
 
+
 var context = canvas.getContext('2d');//获取二次元上下文
 var lineWidth = 5
+bgwhite() //设置白底
 listenToUesr()
 
 //工具
@@ -22,7 +24,10 @@ function setwindowsize() {
 }
 
 
-
+function bgwhite() { //设置白底
+    context.fillStyle = 'white'
+    context.fillRect(0, 0, canvas.width, canvas.height)
+}
 
 //监听鼠标
 function listenToUesr() {
@@ -51,7 +56,7 @@ function listenToUesr() {
     }
 
 
-    thin.onclick = function () {
+    thin.onclick = function () { //选择线条粗细
         lineWidth = 5
         thin.classList.add('active')
         thick.classList.remove('active')
@@ -60,6 +65,16 @@ function listenToUesr() {
         lineWidth = 10
         thin.classList.remove('active')
         thick.classList.add('active')
+    }
+
+    download.onclick = function () { //保存
+        var url = canvas.toDataURL('image/png')
+        var a = document.createElement('a')
+        document.body.appendChild(a)
+        a.href = url
+        a.download = '我的画'
+        a.target = '_blank'
+        a.click()
     }
 
     if (document.ontouchstart !== undefined) { //特性检测（用户是在什么客户端上）

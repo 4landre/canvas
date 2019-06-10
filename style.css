@@ -15,8 +15,14 @@ ol, ul, li {
     padding: 0;
 }
 
+body {
+    overflow: hidden;
+}
 canvas {
     display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
 #canvas {
@@ -31,10 +37,11 @@ canvas {
 
 #action svg {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 10px;
     transition: 0.3s;
+    fill: gray;
 }
 
 #action .pencil.active {
@@ -51,8 +58,8 @@ canvas {
 
 #color {
     position: fixed;
-    left: 16px;
-    top: 120px;
+    left: 10px;
+    top: 90px;
 }
 
 #color ol li {
@@ -84,7 +91,7 @@ canvas {
 
 .line {
     position: fixed;
-    right: 16px;
+    right: 4px;
     top: 20px;
 }
 
@@ -97,13 +104,13 @@ canvas {
 }
 
 .line ol .thin {
-    height: 10px;
-    width: 80px;
+    height: 5px;
+    width: 50px;
 }
 
 .line ol .thick {
-    height: 20px;
-    width: 80px;
+    height: 10px;
+    width: 50px;
 }
 
 .line ol .active {
