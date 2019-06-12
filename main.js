@@ -148,7 +148,7 @@ function listenToUesr() {
 }
 
 //画圆
-function drawCircle(x, y, lineWidth) {
+function drawCircle(x, y) {
     context.beginPath();
     context.arc(x, y, lineWidth * 0.5, 0, Math.PI * 2);
     context.fill();
