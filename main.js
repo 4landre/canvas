@@ -1,6 +1,5 @@
 var canvas = document.getElementById('canvas');//获取canvas
 setwindowsize() //设置canvas全屏
-
 window.onresize = function () {
     setwindowsize()
 }
@@ -149,7 +148,7 @@ function listenToUesr() {
 }
 
 //画圆
-function drawCircle(x, y, radious) {
+function drawCircle(x, y, lineWidth) {
     context.beginPath();
     context.arc(x, y, lineWidth * 0.5, 0, Math.PI * 2);
     context.fill();
